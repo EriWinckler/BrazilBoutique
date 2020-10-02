@@ -1,0 +1,21 @@
+h2 {
+    margin: 10px 10px;
+    padding: 5px 5px;
+}
+
+.store {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.container {
+    margin-top: 2em;
+}
+
+.item {
+   width: 9em;
+   height: auto;
+}

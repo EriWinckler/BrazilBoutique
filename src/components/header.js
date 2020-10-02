@@ -1,16 +1,19 @@
-import React from 'react'
-import '../style/header.scss'
+import React from 'react';
+import '../style/header.scss';
 
 /**
 * @author
 * @function Header
 **/
 
-const Header = (props) => {
-  return(
-    <div className="header">Header</div>
-   )
+const Header = () => {
+  
+  return (
+    <div className="header">
+      <h1>Brazil / Brasil</h1>
+    </div>
+  );
+};
 
- }
 
 export default Header
