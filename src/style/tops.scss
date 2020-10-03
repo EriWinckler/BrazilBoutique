@@ -4,7 +4,7 @@ h2 {
 }
 
 .store {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
@@ -18,4 +18,10 @@ h2 {
 .item {
    width: 9em;
    height: auto;
+}
+
+.productImg {
+    width: 200px;
+    height: auto;
+    max-width: 300px;
 }
