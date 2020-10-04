@@ -4,7 +4,8 @@ export default [
         subtitle: "Win the views!",
         image: "https://i.imgur.com/608tinw.jpg",
         imageAlt: "White T-shirt",
-        link: '#'
+        link: 'https://www.google.com',
+        price: 19.99
     },
     {
         title: "Red Top",
@@ -22,7 +23,9 @@ export default [
         title: "Red Top",
         subtitle: "Win the views!",
         image: "https://i.imgur.com/608tinw.jpg",
-        imageAlt: "Red T-shirt"
+        imageAlt: "Red T-shirt",
+        link: 'https://www.google.com',
+        price: 28.99
     },
     {
         title: "Red Top",

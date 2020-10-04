@@ -1,25 +1,62 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { makeStyles } from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
 
-import '../style/modal.scss'
+const useStyles = makeStyles((theme) => ({
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+  },
+}));
 
-const Modal = ({ isShowing, hide }) => isShowing ? ReactDOM.createPortal(
-    <React.Fragment>
-      <div className="modal-overlay">
-      <div className="modal-wrapper" aria-modal aria-hidden tabIndex={-1} role="dialog">
-        <div className="modal">
-          <div className="modal-header">
-            <button type="button" className="modal-close-button" data-dismiss="modal" aia-label="Close" onClick={hide}>
-              <span aria-hidden="true">&times;</span>
-            </button>
+function SimpleModal() {
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <div>
+      <button type="button" onClick={handleOpen}>
+        react-transition-group
+      </button>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <div className={classes.paper}>
+            <h2 id="transition-modal-title">Transition modal</h2>
+            <p id="transition-modal-description">react-transition-group animates me.</p>
           </div>
-        </div>
-          <p>
-            Hello, Modal!
-          </p>
-      </div>
-      </div>
-    </React.Fragment>, document.body
-) : null;
+        </Fade>
+      </Modal>
+    </div>
+  );
+}
 
-export default Modal;
+
+export default SimpleModal;

@@ -1,6 +1,8 @@
 import React from "react";
 import "../style/tops.scss";
 
+import SimpleModal from './Modal';
+
 import tshirtsData from "../data/tshirtsData";
 
 /**
@@ -9,21 +11,36 @@ import tshirtsData from "../data/tshirtsData";
  **/
 
 const Tops = (props) => {
+
   
   return (
     <section className="sectionTitle">
       <h2>Tops</h2>
       <div className="store">
-        {tshirtsData.map((s, i) => (
-          <div key={s.title}>
+        {tshirtsData.map((data, i) => (
+          <div key={data.title}>
             <div>
-              <div className="container" onClick={s.link}>
-                <img src={s.image} alt={s.imageAlt} className="productImg" />
-                <h5>{s.title}</h5>
-                <p>{s.subtitle}</p>
+              <div className="container" >
+                <a 
+                  href={data.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="productLink"
+                >
+                  <img 
+                    src={data.image} 
+                    alt={data.imageAlt} 
+                    className="productImg"
+                    />
+                  <h5>{data.title}</h5>
+                  
+                  <p>{data.subtitle}</p>
+                  <p>{data.price ? `$ ${data.price}` : null}</p>
+                </a>
               </div>
             </div>
           </div>
+          
         ))}
       </div>
     </section>
