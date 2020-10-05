@@ -10,6 +10,9 @@ Creating a template for a future E-Commerce store focused on brazilian costumers
 
 10/04/2020: Fixed display of images to correct sizes, removed links decorations on products. Also added Lorem Picsum for random images on display of products for easier view of product list.
 
+10/05/2020: Added a home page with a selection of featured itens from the database.
+Added React Router creating individual pages for the categories as well as pages for the items.
+
 What needs to be done:
     - Navigation bar for categories on left side of page.
     - Create model for pages when costumer whats to check the details of the products.

@@ -13,8 +13,8 @@ const Navigation = (props) => {
       <Navbar.Brand href="#home">Navbar</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Tops</Nav.Link>
-          <Nav.Link href="#pricing">Leggings</Nav.Link>
+          <Nav.Link href="#tops">Tops</Nav.Link>
+          <Nav.Link href="#pants">Leggings</Nav.Link>
         </Nav>
         <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />

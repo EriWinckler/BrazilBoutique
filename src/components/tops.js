@@ -15,7 +15,7 @@ const Tops = (props) => {
   
   return (
     <section className="sectionTitle">
-      <h2 className="sectionCategory">Tops</h2>
+      <h2 className="sectionCategory" id="tops">Tops</h2>
       <div className="store">
         {tshirtsData.map((data, i) => (
           <div key={data.title}>

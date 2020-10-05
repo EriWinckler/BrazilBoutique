@@ -2,16 +2,18 @@
     margin: 10px 10px;
     padding: 5px 5px;
     text-align: center;
+    text-decoration: none;
+    color: #000;
 }
 
-.container a {
+a {
     text-decoration: none !important;
     color: #000;
 }
 
-.container a :hover {
-    color: 	#A9A9A9;
-    text-decoration: none;
+a :hover {
+    text-decoration: none !important;
+    color: #A9A9A9;
 }
 
 .container a :active {
