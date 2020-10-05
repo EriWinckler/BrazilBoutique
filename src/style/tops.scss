@@ -1,6 +1,21 @@
-h2 {
+.sectionCategory {
     margin: 10px 10px;
     padding: 5px 5px;
+    text-align: center;
+}
+
+.container a {
+    text-decoration: none !important;
+    color: #000;
+}
+
+.container a :hover {
+    color: 	#A9A9A9;
+    text-decoration: none;
+}
+
+.container a :active {
+    text-decoration: none;
 }
 
 .store {
@@ -31,7 +46,8 @@ h2 {
 }
 
 .productImg {
-    width: 200px;
+    width: 250px;
     height: auto;
     max-width: 300px;
+    max-height: 400px;
 }

@@ -10,7 +10,7 @@ const Header = () => {
   
   return (
     <div className="header">
-      <h1>Brazil / Brasil</h1>
+      <h1 className="headerTitle">Brazil / Brasil</h1>
     </div>
   );
 };

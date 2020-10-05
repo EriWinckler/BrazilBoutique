@@ -15,7 +15,7 @@ const Tops = (props) => {
   
   return (
     <section className="sectionTitle">
-      <h2>Tops</h2>
+      <h2 className="sectionCategory">Tops</h2>
       <div className="store">
         {tshirtsData.map((data, i) => (
           <div key={data.title}>
@@ -34,7 +34,7 @@ const Tops = (props) => {
                     />
                   <h5>{data.title}</h5>
                   
-                  <p>{data.subtitle}</p>
+                  <p>{data.subtitle ? data.subtitle : null}</p>
                   <p>{data.price ? `$ ${data.price}` : null}</p>
                 </a>
               </div>
