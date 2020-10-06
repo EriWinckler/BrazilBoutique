@@ -10,11 +10,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Navigation = (props) => {
   return(
     <Navbar bg="primary" variant="dark" sticky="top">
-      <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+      <Navbar.Brand href="/">Brazil Boutique</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#tops">Tops</Nav.Link>
-          <Nav.Link href="#pants">Leggings</Nav.Link>
+          <Nav.Link href="/" exact>Home</Nav.Link>
+          <Nav.Link href="/tops">Tops</Nav.Link>
+          <Nav.Link href="/pants">Pants</Nav.Link>
         </Nav>
         <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
