@@ -14,9 +14,10 @@ Creating a template for a future E-Commerce store focused on brazilian costumers
 Added a home page with a selection of featured itens from the database. <br />
 Merged the databases and made the necessary adjustments, also fixed the links on the Navbar.
 
+10/06/2020: Added support for Netlify in order to deploy the webpage and show the customer the preview. Also decided to drop the Modal idea as per customer request.
+
 What needs to be done: <br />
     - Navigation bar for categories on left side of page. <br />
     - Create model for pages when costumer whats to check the details of the products.<br />
-    - Add the Modals for products overview.<br />
     - Create Checkout cart.<br />
     - Still thinking on ideas.<br />

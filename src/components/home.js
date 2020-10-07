@@ -2,8 +2,6 @@ import React from "react";
 import "../style/main.scss";
 import { Link } from "react-router-dom";
 
-import SimpleModal from "./Modal";
-
 import data from "../data/data";
 
 /**

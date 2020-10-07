@@ -1,7 +1,5 @@
 import React from "react";
 
-import SimpleModal from "./Modal";
-
 import data from "../data/data";
 
 /**

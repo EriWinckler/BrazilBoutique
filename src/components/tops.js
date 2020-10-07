@@ -1,8 +1,6 @@
 import React from "react";
 import "../style/tops.scss";
 
-import SimpleModal from "./Modal";
-
 import data from "../data/data";
 
 /**

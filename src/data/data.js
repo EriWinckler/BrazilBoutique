@@ -63,7 +63,7 @@ export default [
         category: "Pants",
         title: "White Pants",
         subtitle: "Win the views again!",
-        image: "https://picsum.photos/300/350",
+        image: "https://picsum.photos/300/400",
         imageAlt: "White Pants",
         link: 'https://www.google.com',
         price: 19.99
@@ -73,7 +73,7 @@ export default [
         category: "Pants",
         title: "White Pants",
         subtitle: "Win the views again!",
-        image: "https://picsum.photos/300/350",
+        image: "https://picsum.photos/250/350",
         imageAlt: "White Pants",
         link: 'https://www.google.com'
     },
@@ -82,7 +82,7 @@ export default [
         category: "Pants",
         title: "White Pants",
         subtitle: "Win the views again!",
-        image: "https://picsum.photos/300/350",
+        image: "https://picsum.photos/200/300",
         imageAlt: "White Pants",
         link: 'https://www.google.com',
         price: 19.99

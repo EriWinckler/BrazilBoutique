@@ -8,10 +8,7 @@ import Home from './components/home';
 import Tops from './components/tops';
 import Pants from './components/pants';
 
-import SimpleModal from './components/Modal';
-
 function App() {
-
 
   return (
     <Router>
