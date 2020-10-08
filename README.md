@@ -16,6 +16,8 @@ Merged the databases and made the necessary adjustments, also fixed the links on
 
 10/06/2020: Added support for Netlify in order to deploy the webpage and show the customer the preview. Also decided to drop the Modal idea as per customer request.
 
+10/07/2020: Started to work on React Redux and Node.js backend.
+
 What needs to be done: <br />
     - Navigation bar for categories on left side of page. <br />
     - Create model for pages when costumer whats to check the details of the products.<br />
