@@ -10,7 +10,7 @@ import data from "../data/data";
  **/
 
 const Home = (props) => {
-  const size = 3;
+  const size = 4;
 
   const topsData = data.filter(function(pants) {
     return pants.category === "Tops"
