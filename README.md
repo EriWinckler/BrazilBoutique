@@ -18,6 +18,8 @@ Merged the databases and made the necessary adjustments, also fixed the links on
 
 10/07/2020: Started to work on React Redux and Node.js backend.
 
+10/09/2020: Fixed styling elements that was changing colors due to Link usage.
+
 What needs to be done: <br />
     - Navigation bar for categories on left side of page. <br />
     - Create model for pages when costumer whats to check the details of the products.<br />
