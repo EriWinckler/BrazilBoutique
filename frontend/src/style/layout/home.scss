@@ -1,0 +1,48 @@
+.store {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.container {
+  margin-top: 2rem;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+}
+
+.container :hover,
+:active,
+:focus {
+  text-decoration: none;
+  color: #a9a9a9;
+}
+
+.container h5 {
+  margin-top: 2rem;
+  color: #000;
+
+}
+
+.container p {
+    color: #000;
+    margin: 1rem;
+}
+
+.productLink {
+  text-decoration: none;
+}
+
+.item {
+  width: 9em;
+  height: auto;
+}
+
+.productImg {
+  width: 250px;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+}

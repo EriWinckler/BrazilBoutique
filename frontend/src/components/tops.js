@@ -1,6 +1,4 @@
 import React from "react";
-import "../style/tops.scss";
-
 import data from "../data/data";
 
 /**
