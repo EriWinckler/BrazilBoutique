@@ -18,7 +18,7 @@ Merged the databases and made the necessary adjustments, also fixed the links on
 
 10/07/2020: Started to work on React Redux and Node.js backend.
 
-10/09/2020: Fixed styling elements that was changing colors due to Link usage.
+10/09/2020: Fixed styling elements that was changing colors due to Link usage. Also fixed links on Navbar.
 
 What needs to be done: <br />
     - Navigation bar for categories on left side of page. <br />
