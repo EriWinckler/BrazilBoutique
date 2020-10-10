@@ -18,7 +18,9 @@ Merged the databases and made the necessary adjustments, also fixed the links on
 
 10/07/2020: Started to work on React Redux and Node.js backend.
 
-10/09/2020: Fixed styling elements that was changing colors due to Link usage. Also fixed links on Navbar.
+10/09/2020: Fixed styling elements that was changing colors due to Link usage. Also fixed links on Navbar. <br />
+Started to work on an API idea, instead of getting data from a JS file get it from an API, made a branch to try it out. <br />
+Made another branch for the development of the backend so it fixes the issue with Netlify failing to deploy.
 
 What needs to be done: <br />
     - Navigation bar for categories on left side of page. <br />
