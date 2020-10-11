@@ -2,6 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import "./style/main.scss";
 
+// Google Analytics
+import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
+
 // Components
 import Header from './components/header';
 import Navigation from './components/navigation';
@@ -9,11 +13,18 @@ import Home from './components/home';
 import Tops from './components/tops';
 import Pants from './components/pants';
 
-
 function App() {
 
+  const history = createBrowserHistory();
+
+  history.listen(location => {
+    ReactGA.initialize('UA-180190078-1');
+    ReactGA.set({ page: location.pathname});
+    ReactGA.pageview(location.pathname);
+  })
+
   return (
-    <Router>
+    <Router history={history}>
       <div className="App">
         <Navigation />
         <Header />
