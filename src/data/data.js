@@ -6,7 +6,6 @@ export default [
         subtitle: "Win the views!",
         image: "https://picsum.photos/300/350",
         imageAlt: "White T-shirt",
-        link: 'https://www.google.com',
         price: 19.99
     },
     {

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import data from "../data/data";
 
@@ -18,12 +19,7 @@ const Pants = (props) => {
           return data.category === "Pants" ? (
             <div key={data.title}>
               <div className="container">
-                <a
-                  href={data.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="productLink"
-                >
+                <Link to={`/shop/${data.id}`}>
                   <img
                     src={data.image}
                     alt={data.imageAlt}
@@ -33,7 +29,7 @@ const Pants = (props) => {
 
                   <p>{data.subtitle ? data.subtitle : null}</p>
                   <p>{data.price ? `$ ${data.price}` : null}</p>
-                </a>
+                </Link>
               </div>
             </div>
           ) : null;
