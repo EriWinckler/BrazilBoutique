@@ -1,0 +1,19 @@
+#itemDetail .store {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(300px, 2fr);
+}
+
+#itemDetail .description {
+  margin-top: 2rem;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+}
+
+#itemDetail .details {
+  text-align: justify;
+  padding: 15px 15px;
+}
