@@ -36,22 +36,22 @@ const ItemDetail = ({ match }) => {
                   {data.details ? `${data.details}` : null}
                 </p>
               </div>
+              <div className="description">
+                <AwesomeButton
+                  size={"medium"}
+                  type="primary"
+                  ripple
+                  onPress={() => {
+                    // add to cart
+                  }}
+                >
+                  <FontAwesomeIcon icon={faShoppingCart} />
+                  Add to cart
+                </AwesomeButton>
+              </div>
             </div>
           ) : null;
         })}
-      </div>
-      <div className="description">
-        <AwesomeButton
-          size={"medium"}
-          type="primary"
-          ripple
-          onPress={() => {
-            // add to cart
-          }}
-        >
-          <FontAwesomeIcon icon={faShoppingCart} />
-          Add to cart
-        </AwesomeButton>
       </div>
     </section>
   );

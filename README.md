@@ -28,6 +28,4 @@ Added item detail for every item, when clicked on the item it now opens a dynami
 10/12/2020: Added styling to item detail page. Added sidebar component.
 
 What needs to be done: <br />
-    - Navigation bar for categories on left side of page. <br />
     - Create Checkout cart.<br />
-    - Still thinking on ideas.<br />
