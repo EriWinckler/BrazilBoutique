@@ -1,0 +1,20 @@
+@import "~react-pro-sidebar/dist/scss/styles.scss";
+
+
+.sidebar {
+  float: left;
+  width: 208px;
+  padding-top: 30px;
+  margin-left: initial;
+}
+
+.prosidebar {
+  min-width: 230px !important;
+  width: 230px;
+}
+
+@media only screen and (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+}

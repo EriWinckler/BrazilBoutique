@@ -13,6 +13,7 @@ import Home from "./components/home";
 import Tops from "./components/tops";
 import Pants from "./components/pants";
 import ItemDetail from "./components/itemDetail";
+import Sidebar from "./components/sidebar";
 
 ReactGA.initialize('UA-180190078-1');
 
@@ -30,6 +31,7 @@ function App() {
       <div className="App">
         <Navigation />
         <Header />
+        <Sidebar />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/tops" exact component={Tops} />
