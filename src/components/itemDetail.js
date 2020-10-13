@@ -1,14 +1,16 @@
 import React from "react";
-import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import data from "../data/data";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+
+import { AwesomeButton } from "react-awesome-button";
 
 /**
  * @author
  * @function ItemDetail
  **/
-
-
 
 const ItemDetail = ({ match }) => {
   return (
@@ -39,13 +41,16 @@ const ItemDetail = ({ match }) => {
         })}
       </div>
       <div className="description">
-        <AwesomeButton 
-          type="primary" 
-          size="medium"
-          
+        <AwesomeButton
+          size={"medium"}
+          type="primary"
+          ripple
+          onPress={() => {
+            // add to cart
+          }}
         >
-          
-        Add to Cart
+          <FontAwesomeIcon icon={faShoppingCart} />
+          Add to cart
         </AwesomeButton>
       </div>
     </section>

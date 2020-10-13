@@ -25,8 +25,9 @@ Made another branch for the development of the backend so it fixes the issue wit
 10/11/2020: Found that Google Analytics does not work correctly with the regular boilerplate for ReactGA, will fix in the future. <br/>
 Added item detail for every item, when clicked on the item it now opens a dynamic page with all the info from the item, will work on styling later.
 
+10/12/2020: Added styling to item detail page.
+
 What needs to be done: <br />
     - Navigation bar for categories on left side of page. <br />
-    - Create model for pages when costumer whats to check the details of the products.<br />
     - Create Checkout cart.<br />
     - Still thinking on ideas.<br />
