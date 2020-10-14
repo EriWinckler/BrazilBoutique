@@ -27,5 +27,10 @@ Added item detail for every item, when clicked on the item it now opens a dynami
 
 10/12/2020: Added styling to item detail page. Added sidebar component.
 
+10/13/2020: Added Footer with styling using linear gradient colors from the brazilian flag, also changed the colors of the navbar to match. <br />
+Fixed a lot of styling all around the webpage, like changing the size of the font all around, giving some space between the footer and the button on the item detail page, fixing display size bugs. <br />
+Redone the whole navbar component with Bootstrap so that now it correctly collapses depending on the size of the screen. <br />
+Started to work on Cart page and Log In page.
+
 What needs to be done: <br />
     - Create Checkout cart.<br />

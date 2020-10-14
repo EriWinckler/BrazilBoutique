@@ -16,7 +16,7 @@ import { faTshirt, faHome, faShoePrints } from "@fortawesome/free-solid-svg-icon
 const Sidebar = (props) => {
   return(
     <div className="sidebar">
-      <ProSidebar className="prosidebar" image="https://picsum.photos/300/350" >
+      <ProSidebar className="prosidebar" image="https://picsum.photos/230/135" >
         <Menu iconShape="round">
           <MenuItem > 
             <FontAwesomeIcon icon={faHome} /> Home
@@ -29,7 +29,7 @@ const Sidebar = (props) => {
           <MenuItem > 
             <FontAwesomeIcon icon={faShoePrints} /> Pants
             <Link to="/pants" />
-          </MenuItem>          
+          </MenuItem>         
         </Menu>
       </ProSidebar>
     </div>

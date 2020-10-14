@@ -36,7 +36,7 @@ const ItemDetail = ({ match }) => {
                   {data.details ? `${data.details}` : null}
                 </p>
               </div>
-              <div className="description">
+              <div className="buttom">
                 <AwesomeButton
                   size={"medium"}
                   type="primary"

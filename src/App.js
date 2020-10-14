@@ -14,6 +14,9 @@ import Tops from "./components/tops";
 import Pants from "./components/pants";
 import ItemDetail from "./components/itemDetail";
 import Sidebar from "./components/sidebar";
+import Footer from "./components/footer";
+import Cart from "./components/cart";
+import LogIn from "./components/logIn";
 
 ReactGA.initialize('UA-180190078-1');
 
@@ -37,7 +40,10 @@ function App() {
           <Route path="/tops" exact component={Tops} />
           <Route path="/pants" exact component={Pants} />
           <Route path="/shop/:id" component={ItemDetail} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/login" component={LogIn} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

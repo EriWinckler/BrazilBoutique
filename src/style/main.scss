@@ -1,8 +1,10 @@
+@import "./layout/navbar.scss";
 @import "./layout/header.scss";
 @import "./layout/home.scss";
 @import "./layout/tops.scss";
 @import "./layout/itemDetails.scss";
-@import "./layout//sidebar.scss";
+@import "./layout/sidebar.scss";
+@import "./layout/footer.scss";
 
 a {
     text-decoration: none !important;
