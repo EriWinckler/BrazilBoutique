@@ -32,5 +32,7 @@ Fixed a lot of styling all around the webpage, like changing the size of the fon
 Redone the whole navbar component with Bootstrap so that now it correctly collapses depending on the size of the screen. <br />
 Started to work on Cart page and Log In page.
 
+10/14/2020: Fixed button to go up and styling on the footer component.
+
 What needs to be done: <br />
     - Create Checkout cart.<br />

@@ -3,20 +3,19 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
 
-import { Link } from "react-router-dom";
-
-/**
- * @author
- * @function Footer
- **/
-
 const Footer = (props) => {
   return (
     <footer>
       <div id="go-top">
-        <Link className="smoothscroll" title="Back to Top" href="#header">
-          <FontAwesomeIcon icon={faAngleDoubleUp} />
-        </Link>
+        <FontAwesomeIcon
+          icon={faAngleDoubleUp}
+          cursor="pointer"
+          title="Back to Top"
+          className="backTop"
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        />
       </div>
       <ul className="copyright">
         <li>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import data from "../data/data";
+import data from "../../data/data";
 
 /**
  * @author
@@ -11,8 +11,8 @@ import data from "../data/data";
 const Home = (props) => {
   const size = 4;
 
-  const topsData = data.filter(function(pants) {
-    return pants.category === "Tops"
+  const topsData = data.filter(function (pants) {
+    return pants.category === "Tops";
   });
 
   const tops = topsData.slice(0, size).map((data, i) => {
@@ -31,8 +31,8 @@ const Home = (props) => {
     );
   });
 
-  const pantsData = data.filter(function(pants) {
-    return pants.category === "Pants"
+  const pantsData = data.filter(function (pants) {
+    return pants.category === "Pants";
   });
 
   const pants = pantsData.slice(0, size).map((data, i) => {

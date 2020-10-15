@@ -1,22 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import data from "../data/data";
+import data from "../../data/data";
 
 /**
  * @author
  * @function Tops
  **/
 
-const Pants = (props) => {
+const Tops = (props) => {
   return (
     <section className="sectionTitle">
-      <h2 className="sectionCategory" id="pants">
-        Pants
+      <h2 className="sectionCategory" id="tops">
+        Tops
       </h2>
       <div className="store">
         {data.map((data, i) => {
-          return data.category === "Pants" ? (
+          return data.category === "Tops" ? (
             <div key={data.title}>
               <div className="container">
                 <Link to={`/shop/${data.id}`}>
@@ -39,4 +39,4 @@ const Pants = (props) => {
   );
 };
 
-export default Pants;
+export default Tops;

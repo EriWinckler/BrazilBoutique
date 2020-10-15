@@ -9,9 +9,9 @@ import { createBrowserHistory } from 'history';
 // Components
 import Header from "./components/header";
 import Navigation from "./components/navigation";
-import Home from "./components/home";
-import Tops from "./components/tops";
-import Pants from "./components/pants";
+import Home from "./components/sections/home";
+import Tops from "./components/sections/tops";
+import Pants from "./components/sections/pants";
 import ItemDetail from "./components/itemDetail";
 import Sidebar from "./components/sidebar";
 import Footer from "./components/footer";
