@@ -3,12 +3,17 @@ import { Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart, faCartPlus } from "@fortawesome/free-solid-svg-icons";
+
+
 /**
  * @author
  * @function Navigation
  **/
 
 const Navigation = (props) => {
+
   return (
     <Navbar collapseOnSelect expand="sm" className="color-nav" variant="dark">
       <Navbar.Brand as={Link} to="/" exact>Brazil Boutique</Navbar.Brand>
@@ -27,7 +32,7 @@ const Navigation = (props) => {
         </Nav>
         <Nav className="ml-auto">
           <Nav.Link as={Link} to="/cart">
-            Cart
+            {/*cart.length >= 1 ? <FontAwesomeIcon icon={faCartPlus} /> : <FontAwesomeIcon icon={faShoppingCart} />*/}
           </Nav.Link>
           <Nav.Link as={Link} to="/logIn">
             Log In

@@ -42,7 +42,7 @@ const ItemDetail = ({ match }) => {
                   type="primary"
                   ripple
                   onPress={() => {
-                    // add to cart
+                  //add to cart
                   }}
                 >
                   <FontAwesomeIcon icon={faShoppingCart} />

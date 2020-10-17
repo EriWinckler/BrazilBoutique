@@ -7,16 +7,16 @@ import ReactGA from 'react-ga';
 import { createBrowserHistory } from 'history';
 
 // Components
-import Header from "./components/header";
-import Navigation from "./components/navigation";
-import Home from "./components/sections/home";
-import Tops from "./components/sections/tops";
-import Pants from "./components/sections/pants";
-import ItemDetail from "./components/itemDetail";
-import Sidebar from "./components/sidebar";
-import Footer from "./components/footer";
-import Cart from "./components/cart";
-import LogIn from "./components/logIn";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
+import Home from "./components/sections/Home";
+import Tops from "./components/sections/Tops";
+import Pants from "./components/sections/Pants";
+import ItemDetail from "./components/ItemDetail";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import Cart from "./components/Cart";
+import LogIn from "./components/LogIn";
 
 ReactGA.initialize('UA-180190078-1');
 
