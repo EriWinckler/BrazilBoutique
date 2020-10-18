@@ -1,73 +1,68 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Product from "./Product";
 
-import data from "../../data/data";
-
-/**
- * @author
- * @function Tops
- **/
-
-const Home = (props) => {
-  const size = 4;
-
-  const topsData = data.filter(function (pants) {
-    return pants.category === "Tops";
-  });
-
-  const tops = topsData.slice(0, size).map((data, i) => {
-    return (
-      <div key={data.title}>
-        <div className="container">
-          <Link to={`/shop/${data.id}`}>
-            <img src={data.image} alt={data.imageAlt} className="productImg" />
-            <h5>{data.title}</h5>
-
-            <p>{data.subtitle ? data.subtitle : null}</p>
-            <p>{data.price ? `$ ${data.price}` : null}</p>
-          </Link>
-        </div>
-      </div>
-    );
-  });
-
-  const pantsData = data.filter(function (pants) {
-    return pants.category === "Pants";
-  });
-
-  const pants = pantsData.slice(0, size).map((data, i) => {
-    return (
-      <div key={data.title}>
-        <div className="container">
-          <Link to={`/shop/${data.id}`}>
-            <img src={data.image} alt={data.imageAlt} className="productImg" />
-            <h5>{data.title}</h5>
-
-            <p>{data.subtitle ? data.subtitle : null}</p>
-            <p>{data.price ? `$ ${data.price}` : null}</p>
-          </Link>
-        </div>
-      </div>
-    );
-  });
-
+function Home() {
   return (
-    <section className="sectionTitle">
-      <Link to="/tops">
-        <h2 className="sectionCategory">
-          Tops
-        </h2>
-      </Link>
-      <div className="store">{tops}</div>
+    <section id="home">
+      <div className="homeRow">
+        <Product
+          id="1"
+          category="Tops"
+          title="Lorem Ipsum"
+          subtitle="Win the views!"
+          image="https://picsum.photos/300/350"
+          imageAlt="Lorem Ipsum"
+          details="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget gravida. Orci dapibus ultrices in iaculis nunc sed augue lacus."
+          price={19.99}
+          rating={5}
+        />
+        <Product 
+          id= "2"
+          category= "Tops"
+          title= "Venenatis a Condimentum"
+          subtitle= "Win the views!"
+          image= "https://picsum.photos/250/400"
+          imageAlt= "Venenatis a Condimentum"
+          details="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget gravida."
+          price={19.99}
+          rating={5}
+        />
+      </div>
 
-      <Link to="/pants">
-        <h2 className="sectionCategory">
-          Pants
-        </h2>
-      </Link>
-      <div className="store">{pants}</div>
+      <div className="homeRow">
+       <Product 
+          id= "3"
+          category= "Tortor at Auctor"
+          title= "Red Top"
+          image= "https://picsum.photos/300/600"
+          imageAlt= "Tortor at Auctor"
+          details="Nulla malesuada pellentesque elit eget gravida."
+          price={29.99}
+          rating={4}
+       />
+       <Product 
+          id= "4"
+          category= "Tops"
+          title= "Eget Nunc Lobortis"
+          subtitle= "Win the views!"
+          image= "https://picsum.photos/400/400"
+          imageAlt= "Eget Nunc Lobortis"
+          price={28.99}
+          rating={3}
+       />
+       <Product 
+          id= "5"
+          category= "Tops"
+          title= "Quam Adipiscing Vitae"
+          subtitle= "Win the views!"
+          image= "https://picsum.photos/300/400"
+          imageAlt= "Quam Adipiscing Vitae"
+          price={159.99}
+          rating={5}
+       />
+      </div>
     </section>
   );
-};
+}
 
 export default Home;

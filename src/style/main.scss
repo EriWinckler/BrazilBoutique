@@ -5,6 +5,7 @@
 @import "./layout/itemDetails.scss";
 @import "./layout/sidebar.scss";
 @import "./layout/footer.scss";
+@import "./layout/product.scss";
 
 a {
     text-decoration: none !important;
@@ -15,4 +16,8 @@ a :hover, :active, :focus {
     text-decoration: none !important;
     color: #A9A9A9 !important;
     cursor: pointer;
+}
+
+body {
+    background-color:#F8F8F8;
 }
