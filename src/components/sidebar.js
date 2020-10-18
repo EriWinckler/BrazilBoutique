@@ -8,11 +8,6 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTshirt, faHome, faShoePrints } from "@fortawesome/free-solid-svg-icons";
 
-/**
-* @author
-* @function Sidebar
-**/
-
 const Sidebar = (props) => {
   return(
     <div className="sidebar">

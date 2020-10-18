@@ -34,5 +34,7 @@ Started to work on Cart page and Log In page.
 
 10/14/2020: Fixed button to go up and styling on the footer component.
 
+10/17/2020: Working on Context API in order to add the Cart component.
+
 What needs to be done: <br />
     - Create Checkout cart.<br />

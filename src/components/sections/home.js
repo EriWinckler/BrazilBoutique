@@ -54,14 +54,14 @@ const Home = (props) => {
   return (
     <section className="sectionTitle">
       <Link to="/tops">
-        <h2 className="sectionCategory" id="tops">
+        <h2 className="sectionCategory">
           Tops
         </h2>
       </Link>
       <div className="store">{tops}</div>
 
       <Link to="/pants">
-        <h2 className="sectionCategory" id="pants">
+        <h2 className="sectionCategory">
           Pants
         </h2>
       </Link>

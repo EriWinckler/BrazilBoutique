@@ -2,17 +2,31 @@ import React from "react";
 import "react-awesome-button/dist/styles.css";
 import data from "../data/data";
 
+import { useStateValue } from '../Context/StateProvider';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 import { AwesomeButton } from "react-awesome-button";
 
-/**
- * @author
- * @function ItemDetail
- **/
+const ItemDetail = ({ match, id, title, image, price, rating }) => {
 
-const ItemDetail = ({ match }) => {
+  const [{ cart }, dispatch] = useStateValue();
+
+  const addToCart = () => {
+    // Add item to cart
+    dispatch({
+      type: 'ADD_TO_CART',
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      }
+    })
+  }
+
   return (
     <section id="itemDetail">
       <div className="store">
@@ -37,6 +51,7 @@ const ItemDetail = ({ match }) => {
                 </p>
               </div>
               <div className="buttom">
+                <buttom onClick={addToCart}>Add to basket</buttom>
                 <AwesomeButton
                   size={"medium"}
                   type="primary"
