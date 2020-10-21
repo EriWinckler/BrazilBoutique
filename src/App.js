@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./style/main.scss";
 
 // Google Analytics
-import ReactGA from 'react-ga';
-import { createBrowserHistory } from 'history';
+import ReactGA from "react-ga";
+import { createBrowserHistory } from "history";
 
 // Components
 import Header from "./components/Header";
@@ -15,19 +15,18 @@ import Pants from "./components/sections/Pants";
 import ItemDetail from "./components/ItemDetail";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 import LogIn from "./components/LogIn";
 
-ReactGA.initialize('UA-180190078-1');
+ReactGA.initialize("UA-180190078-1");
 
 function App() {
-
   const history = createBrowserHistory();
 
-  history.listen(location => {
-    ReactGA.set({ page: location.pathname});
+  history.listen((location) => {
+    ReactGA.set({ page: location.pathname });
     ReactGA.pageview(location.pathname);
-  })
+  });
 
   return (
     <Router>
@@ -40,7 +39,7 @@ function App() {
           <Route path="/tops" exact component={Tops} />
           <Route path="/pants" exact component={Pants} />
           <Route path="/shop/:id" component={ItemDetail} />
-          <Route path="/cart" component={Cart} />
+          <Route path="/checkout" component={Checkout} />
           <Route path="/login" component={LogIn} />
         </Switch>
         <Footer />

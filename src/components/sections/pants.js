@@ -3,11 +3,6 @@ import { Link } from "react-router-dom";
 
 import data from "../../data/data";
 
-/**
- * @author
- * @function Tops
- **/
-
 const Pants = (props) => {
   return (
     <section className="sectionTitle">
