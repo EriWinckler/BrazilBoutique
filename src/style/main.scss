@@ -9,10 +9,11 @@
 @import "./layout/checkout.scss";
 @import "./layout/checkoutProduct.scss";
 @import "./layout/subtotal.scss";
+@import "./layout//logIn.scss";
 
 a {
   text-decoration: none !important;
-  color: #000;
+  color: #000 !important;
 }
 
 a :hover,

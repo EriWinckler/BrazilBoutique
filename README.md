@@ -37,3 +37,7 @@ Started to work on Cart page and Log In page.
 10/17/2020: Working on Context API in order to add the Cart component.
 
 10/21/2020: Working on adding a Cart, Subtotal and Checkout process.
+
+10/22/2020: Finished Cart, Subtotal and Checkout component. <br />
+Added Sign in component with Firebase and added all the functionality around it. <br />
+deployed as unfinished build thro Firebase at https://brazilboutique-ba097.web.app/

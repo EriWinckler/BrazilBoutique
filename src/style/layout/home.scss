@@ -4,9 +4,36 @@
   margin-right: auto;
 }
 
-.homeRow {
-  display: flex;
-  z-index: 1;
-  margin-left: 5px;
-  margin-right: 5px;
+.store {
+  max-width: 1500px;
+  margin: 0 10px;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.product {
+  margin-top: 1rem;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+}
+
+.product :hover,
+:active,
+:focus {
+  text-decoration: none;
+  color: #a0a0a0;
+}
+
+.productImg {
+  width: 250px;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+}
+
+#home h1 {
+  text-align: center;
+  padding: 10px;
 }

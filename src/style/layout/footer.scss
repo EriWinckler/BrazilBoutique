@@ -1,20 +1,21 @@
 footer {
-    text-align: center;
-    height: 100px;
-    background: -webkit-linear-gradient(left,#009c3b,#ffdf00 30%);
+  text-align: center;
+  height: 100px;
+  background: -webkit-linear-gradient(left, #009c3b, #ffdf00 30%);
+  margin-top: 10px;
 }
 
 #go-top,
 .copyright {
-    padding: 10px 0 0;
+  padding: 10px 0 0;
 }
 
 #go-top {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .backTop {
-    height: 1.5rem !important;
-    width: 1.5rem !important;
-    color: #002776;
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+  color: #002776;
 }

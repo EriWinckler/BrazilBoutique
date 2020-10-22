@@ -1,30 +1,5 @@
 export const initialState = {
-  cart: [
-    {
-      id: "1",
-      category: "Tops",
-      title: "Lorem Ipsum",
-      subtitle: "Win the views!",
-      image: "https://picsum.photos/300/350",
-      imageAlt: "Lorem Ipsum",
-      details:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget gravida. Orci dapibus ultrices in iaculis nunc sed augue lacus.",
-      price: 19.99,
-      rating: 5,
-    },
-    {
-      id: "2",
-      category: "Tops",
-      title: "Lorem Ipsum",
-      subtitle: "Win the views!",
-      image: "https://picsum.photos/300/350",
-      imageAlt: "Lorem Ipsum",
-      details:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget gravida. Orci dapibus ultrices in iaculis nunc sed augue lacus.",
-      price: 19.99,
-      rating: 5,
-    },
-  ],
+  cart: [],
   user: null,
 };
 
@@ -34,6 +9,11 @@ export const getCartTotal = (cart) =>
 const reducer = (state, action) => {
   console.log(action);
   switch (action.type) {
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user,
+      };
     case "ADD_TO_CART":
       // Logic to add item to cart
       return {

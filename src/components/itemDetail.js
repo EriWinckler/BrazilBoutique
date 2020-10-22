@@ -2,71 +2,70 @@ import React from "react";
 import "react-awesome-button/dist/styles.css";
 import data from "../data/data";
 
-import { useStateValue } from '../Context/StateProvider';
+import { useStateValue } from "../Context/StateProvider";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 import { AwesomeButton } from "react-awesome-button";
 
-const ItemDetail = ({ match, id, title, image, price, rating }) => {
-
+const ItemDetail = ({
+  match,
+  id,
+  title,
+  subtitle,
+  image,
+  price,
+  rating,
+  imageAlt,
+  details,
+}) => {
   const [{ cart }, dispatch] = useStateValue();
 
   const addToCart = () => {
     // Add item to cart
     dispatch({
-      type: 'ADD_TO_CART',
+      type: "ADD_TO_CART",
       item: {
-        id: id,
-        title: title,
-        image: image,
-        price: price,
-        rating: rating,
-      }
-    })
-  }
+        id,
+        title,
+        subtitle,
+        image,
+        imageAlt,
+        price,
+        rating,
+        details,
+      },
+    });
+  };
+  console.log(id);
 
   return (
     <section id="itemDetail">
       <div className="store">
-        {data.map((data, i) => {
-          return data.id === `${match.params.id}` ? (
-            <div>
-              <div key={data.title}>
-                <div className="container">
-                  <img
-                    src={data.image}
-                    alt={data.imageAlt}
-                    className="productImg"
-                  />
-                </div>
-              </div>
-              <div className="description">
-                <h5>{data.title}</h5>
-                <p>{data.subtitle ? data.subtitle : null}</p>
-                <p>{data.price ? `$ ${data.price}` : null}</p>
-                <p className="details">
-                  {data.details ? `${data.details}` : null}
-                </p>
-              </div>
-              <div className="buttom">
-                <buttom onClick={addToCart}>Add to basket</buttom>
-                <AwesomeButton
-                  size={"medium"}
-                  type="primary"
-                  ripple
-                  onPress={() => {
-                  //add to cart
-                  }}
-                >
-                  <FontAwesomeIcon icon={faShoppingCart} />
-                  Add to cart
-                </AwesomeButton>
-              </div>
-            </div>
-          ) : null;
-        })}
+        <div key={title}>
+          <div className="container">
+            <img src={image} alt={imageAlt} className="productImg" />
+          </div>
+        </div>
+        <div className="description">
+          <h5>{title}</h5>
+          <p>{subtitle ? subtitle : null}</p>
+          <p>{price ? `$ ${price}` : null}</p>
+          <p className="details">{details ? `${details}` : null}</p>
+        </div>
+        <div className="buttom">
+          <buttom onClick={addToCart}>Add to basket</buttom>
+          <AwesomeButton
+            size={"medium"}
+            type="primary"
+            ripple
+            onPress={addToCart}
+          >
+            <FontAwesomeIcon icon={faShoppingCart} />
+            Add to cart
+          </AwesomeButton>
+        </div>
       </div>
     </section>
   );
