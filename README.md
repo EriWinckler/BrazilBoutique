@@ -42,7 +42,7 @@ Started to work on Cart page and Log In page.
 
 10/22/2020: Finished Cart, Subtotal and Checkout component. <br />
 Added Sign in component with Firebase and added all the functionality around it. <br />
-deployed as unfinished build thro Firebase at https://brazilboutique-ba097.web.app/
+deployed as unfinished build thro Firebase.
 
 10/24/2020: Webpage finalized. <br />
 Technologies used: <br />
