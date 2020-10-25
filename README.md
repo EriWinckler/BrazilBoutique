@@ -45,6 +45,7 @@ Added Sign in component with Firebase and added all the functionality around it.
 deployed as unfinished build thro Firebase.
 
 10/24/2020: Webpage finalized. <br />
+Hosted at https://brazilboutique-ba097.firebaseapp.com/ <br />
 Technologies used: <br />
 
 - Bootstrap for the Navbar<br />
