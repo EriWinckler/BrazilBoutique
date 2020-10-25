@@ -1,7 +1,3 @@
-.checkout {
-  height: 10rem;
-}
-
 .checkoutAd {
   width: 100%;
   margin-bottom: 10px;
@@ -17,4 +13,9 @@
 .checkoutEmptyMsg {
   margin-top: 5rem;
   padding: 0 10px;
+}
+
+#checkoutList {
+  min-height: 500px;
+  display: grid;
 }

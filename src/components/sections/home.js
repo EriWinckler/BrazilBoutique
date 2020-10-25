@@ -1,76 +1,61 @@
 import React from "react";
 import Product from "./Product";
+import data from "../../data/data";
+import { Link } from "react-router-dom";
 
 function Home() {
+  const size = 3;
+
+  const topsData = data.filter(function (tops) {
+    return tops.category === "Tops";
+  });
+
+  const pantsData = data.filter(function (pants) {
+    return pants.category === "Pants";
+  });
+
   return (
     <section id="home">
+      <Link to={"/tops"}>
+        <div className="homeTitle">
+          <h1>Tops</h1>
+        </div>
+      </Link>
       <div className="store">
-        <Product
-          id="1"
-          category="Tops"
-          title="Lorem Ipsum"
-          subtitle="Win the views!"
-          image="https://picsum.photos/300/350"
-          imageAlt="Lorem Ipsum"
-          details="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget gravida. Orci dapibus ultrices in iaculis nunc sed augue lacus."
-          price={19.99}
-          rating={5}
-        />
-        <Product
-          id="2"
-          category="Tops"
-          title="Venenatis a Condimentum"
-          subtitle="Win the views!"
-          image="https://picsum.photos/250/400"
-          imageAlt="Venenatis a Condimentum"
-          details="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla malesuada pellentesque elit eget gravida."
-          price={19.99}
-          rating={5}
-        />
-        <Product
-          id="3"
-          category="Tortor at Auctor"
-          title="Red Top"
-          image="https://picsum.photos/300/600"
-          imageAlt="Tortor at Auctor"
-          details="Nulla malesuada pellentesque elit eget gravida."
-          price={29.99}
-          rating={4}
-        />
+        {topsData?.slice(0, size).map((item) => (
+          <Product
+            id={item.id}
+            category={item.category}
+            title={item.title}
+            subtitle={item.subtitle}
+            image={item.image}
+            imageAlt={item.imageAlt}
+            details={item.details}
+            price={item.price}
+            rating={item.rating}
+          />
+        ))}
+      </div>
 
-        <Product
-          id="8"
-          category="Pants"
-          title="Egestas Erat"
-          subtitle="Win the views again!"
-          image="https://picsum.photos/300/250"
-          imageAlt="Egestas Erat"
-          details="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          price={19.99}
-          rating={4}
-        />
-        <Product
-          id="10"
-          category="Pants"
-          title="Ultrices"
-          subtitle="Win the views again!"
-          image="https://picsum.photos/200/300"
-          imageAlt="Ultrices"
-          details="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tortor id aliquet lectus proin nibh."
-          price={19.99}
-          rating={5}
-        />
-        <Product
-          id="11"
-          category="Pants"
-          title="Placerat"
-          subtitle="Win the views again!"
-          image="https://picsum.photos/300/350"
-          imageAlt="Placerat"
-          details="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          price={19.99}
-          rating={4}
-        />
+      <Link to={"/pants"}>
+        <div className="homeTitle">
+          <h1>Pants</h1>
+        </div>
+      </Link>
+      <div className="store">
+        {pantsData?.slice(0, size).map((item) => (
+          <Product
+            id={item.id}
+            category={item.category}
+            title={item.title}
+            subtitle={item.subtitle}
+            image={item.image}
+            imageAlt={item.imageAlt}
+            details={item.details}
+            price={item.price}
+            rating={item.rating}
+          />
+        ))}
       </div>
     </section>
   );

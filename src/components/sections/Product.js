@@ -38,8 +38,9 @@ function Product({ id, title, image, price, rating, imageAlt }) {
           </div>
         </Link>
       </div>
-      <img className="productImage" src={image} alt={imageAlt} />
-
+      <Link to={`/shop/${id}`} id={id}>
+        <img className="productImage" src={image} alt={imageAlt} />
+      </Link>
       <button onClick={addToCart} className="productButton">
         Add to cart
       </button>

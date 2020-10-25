@@ -1,15 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../../Context/StateProvider";
 
 import data from "../../data/data";
 
-/**
- * @author
- * @function Tops
- **/
-
-const Home = (props) => {
+const Home = () => {
+  const [{ cart }, dispatch] = useStateValue();
   const size = 4;
+
+  const addToCart = () => {
+    dispatch({
+      // Add item to cart.
+      type: "ADD_TO_CART",
+      item: {
+        id: data.id,
+        title: data.title,
+        subtitle: data.subtitle,
+        image: data.image,
+        imageAlt: data.imageAlt,
+        price: data.price,
+        rating: data.rating,
+        details: data.details,
+      },
+    });
+  };
 
   const topsData = data.filter(function (pants) {
     return pants.category === "Tops";
@@ -26,6 +40,9 @@ const Home = (props) => {
             <p>{data.subtitle ? data.subtitle : null}</p>
             <p>{data.price ? `$ ${data.price}` : null}</p>
           </Link>
+          <button onClick={addToCart} className="productButton">
+            Add to cart
+          </button>
         </div>
       </div>
     );
@@ -52,23 +69,16 @@ const Home = (props) => {
   });
 
   return (
-    // <section className="sectionTitle">
-    //   <Link to="/tops">
-    //     <h2 className="sectionCategory">
-    //       Tops
-    //     </h2>
-    //   </Link>
-    //   <div className="store">{tops}</div>
+    <section id="home" className="sectionTitle">
+      <Link to="/tops">
+        <h2 className="sectionCategory">Tops</h2>
+      </Link>
+      <div className="store">{tops}</div>
 
-    //   <Link to="/pants">
-    //     <h2 className="sectionCategory">
-    //       Pants
-    //     </h2>
-    //   </Link>
-    //   <div className="store">{pants}</div>
-    // </section>
-    <section id="home">
-      
+      <Link to="/pants">
+        <h2 className="sectionCategory">Pants</h2>
+      </Link>
+      <div className="store">{pants}</div>
     </section>
   );
 };

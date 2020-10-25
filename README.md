@@ -41,3 +41,13 @@ Started to work on Cart page and Log In page.
 10/22/2020: Finished Cart, Subtotal and Checkout component. <br />
 Added Sign in component with Firebase and added all the functionality around it. <br />
 deployed as unfinished build thro Firebase at https://brazilboutique-ba097.web.app/
+
+10/24/2020: Webpage finalized. <br />
+Technologies used: <br />
+
+- Bootstrap for the Navbar<br />
+- ContextAPI handle the cart and general information<br />
+- React Router<br />
+- React Currency Format <br />
+- Firebase as a hosting service and user authenticator <br />
+- FontAwesome <br />

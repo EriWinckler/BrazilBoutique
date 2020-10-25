@@ -24,48 +24,68 @@ const ItemDetail = ({
 
   const addToCart = () => {
     // Add item to cart
-    dispatch({
-      type: "ADD_TO_CART",
-      item: {
-        id,
-        title,
-        subtitle,
-        image,
-        imageAlt,
-        price,
-        rating,
-        details,
-      },
+    data.map((data, i) => {
+      return data.id === `${match.params.id}`
+        ? dispatch({
+            type: "ADD_TO_CART",
+            item: {
+              id: data.id,
+              title: data.title,
+              subtitle: data.subtitle,
+              image: data.image,
+              imageAlt: data.imageAlt,
+              price: data.price,
+              rating: data.rating,
+              details: data.details,
+            },
+          })
+        : null;
     });
   };
-  console.log(id);
+
+  console.log(data.rating);
 
   return (
     <section id="itemDetail">
       <div className="store">
-        <div key={title}>
-          <div className="container">
-            <img src={image} alt={imageAlt} className="productImg" />
-          </div>
-        </div>
-        <div className="description">
-          <h5>{title}</h5>
-          <p>{subtitle ? subtitle : null}</p>
-          <p>{price ? `$ ${price}` : null}</p>
-          <p className="details">{details ? `${details}` : null}</p>
-        </div>
-        <div className="buttom">
-          <buttom onClick={addToCart}>Add to basket</buttom>
-          <AwesomeButton
-            size={"medium"}
-            type="primary"
-            ripple
-            onPress={addToCart}
-          >
-            <FontAwesomeIcon icon={faShoppingCart} />
-            Add to cart
-          </AwesomeButton>
-        </div>
+        {data.map((data, i) => {
+          return data.id === `${match.params.id}` ? (
+            <div>
+              <div key={data.title}>
+                <div className="product">
+                  <img
+                    src={data.image}
+                    alt={data.imageAlt}
+                    className="productImage"
+                  />
+                  <div className="description">
+                    <h5>{data.title}</h5>
+                    <p>{data.subtitle ? data.subtitle : null}</p>
+                    <p className="productPrice">
+                      <small>$</small>
+                      <strong>{data.price}</strong>
+                    </p>
+                    <div className="productRating">
+                      {data.rating
+                        ? Array(data.rating)
+                            .fill()
+                            .map((_) => <p>⭐</p>)
+                        : null}
+                    </div>
+                    <p className="details">
+                      {data.details ? `${data.details}` : null}
+                    </p>
+                  </div>
+                  <div className="buttom">
+                    <button onClick={addToCart} className="productButton">
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : null;
+        })}
       </div>
     </section>
   );
