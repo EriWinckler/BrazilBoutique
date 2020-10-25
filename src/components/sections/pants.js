@@ -1,39 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Product from "./Product";
 import data from "../../data/data";
 
-/**
- * @author
- * @function Tops
- **/
+const Pants = () => {
+  const pantsData = data.filter(function (tops) {
+    return tops.category === "Pants";
+  });
 
-const Pants = (props) => {
   return (
-    <section className="sectionTitle">
-      <h2 className="sectionCategory" id="pants">
-        Pants
-      </h2>
+    <section id="home">
+      <div className="homeTitle">
+        <h1>Pants</h1>
+      </div>
       <div className="store">
-        {data.map((data, i) => {
-          return data.category === "Pants" ? (
-            <div key={data.title}>
-              <div className="container">
-                <Link to={`/shop/${data.id}`}>
-                  <img
-                    src={data.image}
-                    alt={data.imageAlt}
-                    className="productImg"
-                  />
-                  <h5>{data.title}</h5>
-
-                  <p>{data.subtitle ? data.subtitle : null}</p>
-                  <p>{data.price ? `$ ${data.price}` : null}</p>
-                </Link>
-              </div>
-            </div>
-          ) : null;
-        })}
+        {pantsData?.map((item) => (
+          <Product
+            id={item.id}
+            category={item.category}
+            title={item.title}
+            subtitle={item.subtitle}
+            image={item.image}
+            imageAlt={item.imageAlt}
+            details={item.details}
+            price={item.price}
+            rating={item.rating}
+          />
+        ))}
       </div>
     </section>
   );

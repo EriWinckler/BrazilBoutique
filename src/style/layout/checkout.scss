@@ -1,0 +1,21 @@
+.checkoutAd {
+  width: 100%;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.checkoutTitle {
+  padding: 10px;
+  margin-right: 10px;
+  border-bottom: 2px solid #d3d3d3;
+}
+
+.checkoutEmptyMsg {
+  margin-top: 5rem;
+  padding: 0 10px;
+}
+
+#checkoutList {
+  min-height: 500px;
+  display: grid;
+}

@@ -1,43 +1,29 @@
+#home {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .store {
   max-width: 1500px;
-  margin: 0 auto;
+  margin: 0 10px;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.container {
-  margin-top: 2rem;
+.product {
+  margin-top: 1rem;
   text-align: center;
   color: #000;
   text-decoration: none;
 }
 
-.container :hover,
+#home .product :hover,
 :active,
 :focus {
   text-decoration: none;
-  color: #a9a9a9;
-}
-
-.container h5 {
-  margin-top: 2rem;
-  color: #000;
-
-}
-
-.container p {
-    color: #000;
-    margin: 1rem;
-}
-
-.productLink {
-  text-decoration: none;
-}
-
-.item {
-  width: 9em;
-  height: auto;
+  color: #a0a0a0;
 }
 
 .productImg {
@@ -45,4 +31,9 @@
   height: auto;
   max-width: 300px;
   max-height: 400px;
+}
+
+#home h1 {
+  text-align: center;
+  padding: 10px;
 }

@@ -1,73 +1,64 @@
 import React from "react";
+import Product from "./Product";
+import data from "../../data/data";
 import { Link } from "react-router-dom";
 
-import data from "../../data/data";
+function Home() {
+  const size = 3;
 
-/**
- * @author
- * @function Tops
- **/
-
-const Home = (props) => {
-  const size = 4;
-
-  const topsData = data.filter(function (pants) {
-    return pants.category === "Tops";
-  });
-
-  const tops = topsData.slice(0, size).map((data, i) => {
-    return (
-      <div key={data.title}>
-        <div className="container">
-          <Link to={`/shop/${data.id}`}>
-            <img src={data.image} alt={data.imageAlt} className="productImg" />
-            <h5>{data.title}</h5>
-
-            <p>{data.subtitle ? data.subtitle : null}</p>
-            <p>{data.price ? `$ ${data.price}` : null}</p>
-          </Link>
-        </div>
-      </div>
-    );
+  const topsData = data.filter(function (tops) {
+    return tops.category === "Tops";
   });
 
   const pantsData = data.filter(function (pants) {
     return pants.category === "Pants";
   });
 
-  const pants = pantsData.slice(0, size).map((data, i) => {
-    return (
-      <div key={data.title}>
-        <div className="container">
-          <Link to={`/shop/${data.id}`}>
-            <img src={data.image} alt={data.imageAlt} className="productImg" />
-            <h5>{data.title}</h5>
-
-            <p>{data.subtitle ? data.subtitle : null}</p>
-            <p>{data.price ? `$ ${data.price}` : null}</p>
-          </Link>
-        </div>
-      </div>
-    );
-  });
-
   return (
-    <section className="sectionTitle">
-      <Link to="/tops">
-        <h2 className="sectionCategory" id="tops">
-          Tops
-        </h2>
+    <section id="home">
+      <Link to={"/tops"}>
+        <div className="homeTitle">
+          <h1>Tops</h1>
+        </div>
       </Link>
-      <div className="store">{tops}</div>
+      <div className="store">
+        {topsData?.slice(0, size).map((item) => (
+          <Product
+            id={item.id}
+            category={item.category}
+            title={item.title}
+            subtitle={item.subtitle}
+            image={item.image}
+            imageAlt={item.imageAlt}
+            details={item.details}
+            price={item.price}
+            rating={item.rating}
+          />
+        ))}
+      </div>
 
-      <Link to="/pants">
-        <h2 className="sectionCategory" id="pants">
-          Pants
-        </h2>
+      <Link to={"/pants"}>
+        <div className="homeTitle">
+          <h1>Pants</h1>
+        </div>
       </Link>
-      <div className="store">{pants}</div>
+      <div className="store">
+        {pantsData?.slice(0, size).map((item) => (
+          <Product
+            id={item.id}
+            category={item.category}
+            title={item.title}
+            subtitle={item.subtitle}
+            image={item.image}
+            imageAlt={item.imageAlt}
+            details={item.details}
+            price={item.price}
+            rating={item.rating}
+          />
+        ))}
+      </div>
     </section>
   );
-};
+}
 
 export default Home;

@@ -5,14 +5,25 @@
 @import "./layout/itemDetails.scss";
 @import "./layout/sidebar.scss";
 @import "./layout/footer.scss";
+@import "./layout/product.scss";
+@import "./layout/checkout.scss";
+@import "./layout/checkoutProduct.scss";
+@import "./layout/subtotal.scss";
+@import "./layout//logIn.scss";
 
 a {
-    text-decoration: none !important;
-    color: #000;
+  text-decoration: none !important;
+  color: #000 !important;
 }
 
-a :hover, :active, :focus {
-    text-decoration: none !important;
-    color: #A9A9A9 !important;
-    cursor: pointer;
+a :hover,
+:active,
+:focus {
+  text-decoration: none !important;
+  color: #a9a9a9 !important;
+  cursor: pointer;
+}
+
+body {
+  background-color: rgb(234, 237, 237) !important;
 }
