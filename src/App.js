@@ -7,15 +7,15 @@ import { useStateValue } from "./Context/StateProvider";
 import { auth } from "./components/firebase";
 
 // Components
-import Header from "./components/Header";
-import Navigation from "./components/Navigation";
-import Home from "./components/sections/Home";
-import Tops from "./components/sections/Tops";
-import Pants from "./components/sections/Pants";
-import ItemDetail from "./components/ItemDetail";
+import Header from "./components/header";
+import Navigation from "./components/navigation";
+import Home from "./components/sections/home";
+import Tops from "./components/sections/tops";
+import Pants from "./components/sections/pants";
+import ItemDetail from "./components/itemDetail";
 import Footer from "./components/Footer";
 import Checkout from "./components/Checkout";
-import Login from "./components/Login";
+import Login from "./components/logIn";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
