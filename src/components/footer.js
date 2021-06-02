@@ -26,7 +26,7 @@ const Footer = (props) => {
             rel="noopener noreferrer"
           >
             {" "}
-            Magnus Projects
+            Made with ❤️ by Eri Winckler
           </a>
         </li>
       </ul>
